@@ -1,6 +1,6 @@
 import vscode from 'vscode'
-import { getInlineCompletionItemProvider } from '../provider/inlineCompletionItemProvider'
-import { getCodeLensProvider } from '../provider/codelensProvider'
+import { getInlineCompletionItemProvider } from '@/provider/inlineCompletionItemProvider'
+import { getCodeLensProvider } from '@/provider/codelensProvider'
 
 export class Language {
   context!: vscode.ExtensionContext
