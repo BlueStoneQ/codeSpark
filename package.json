@@ -11,11 +11,12 @@
   ],
   "activationEvents": ["*"],
   "main": "./dist/extension.js",
+  "keywords": ["AI", "code assistant"],
   "contributes": {
     "commands": [
       {
-        "command": "codeSpark.helloWorld",
-        "title": "Hello World"
+        "command": "codeSpark.runFunction",
+        "title": "codeSpark:run function"
       }
     ]
   },

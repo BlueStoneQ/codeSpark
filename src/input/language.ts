@@ -1,5 +1,6 @@
 import vscode from 'vscode'
 import { getInlineCompletionItemProvider } from '../provider/inlineCompletionItemProvider'
+import { getCodeLensProvider } from '../provider/codelensProvider'
 
 export class Language {
   context!: vscode.ExtensionContext
@@ -24,8 +25,8 @@ export class Language {
   }
 
   registerCodeLensProvider() {
-    // this.context.subscriptions.push(
-      // vscode.languages.registerCodeLensProvider({ pattern: '**',  }, )
-    // )
+    this.context.subscriptions.push(
+      vscode.languages.registerCodeLensProvider({ pattern: '**' }, getCodeLensProvider())
+    )
   }
 }
